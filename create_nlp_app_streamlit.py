@@ -37,6 +37,7 @@ st.write("Start with a short topic and let's work in four steps: Generate text a
 user_input = st.text_area(" Write a topic: ")
 done=False
 # Button to process
+generated_text=''
 if st.button("Start processing..."):
     if user_input.strip() != "":
         with st.spinner("Wait ...!⏳"):
@@ -67,7 +68,7 @@ user_input = st.text_area(" Write a Question: ")
 if st.button("Answering..."):
     if user_input.strip() != "":
         with st.spinner('Wait...'):
-            out=questions(question=user_input, context=translated_text)
+            out=questions(question=user_input, context=generated_text)
             st.subheader("The Answer")
             st.write(out)
 
