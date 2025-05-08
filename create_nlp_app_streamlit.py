@@ -23,7 +23,7 @@ summarizer = pipeline("summarization")
 
 # 3. Translation Pipeline (English ➔ French)
 translator = pipeline("translation_en_to_fr")
-questions = pipeline("deepset/roberta-base-squad2")
+questions = pipeline("question-answering", model="deepset/roberta-base-squad2")
 
 # ✨ Create the Streamlit App
 
